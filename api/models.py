@@ -5,6 +5,7 @@ from django.utils import timezone
 class Movie(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=360)
+    director = models.CharField(max_length=50)
     year = models.IntegerField(blank=False, null=False)
     rating = models.IntegerField(blank=False, null=False)
     created_date = models.DateTimeField(
